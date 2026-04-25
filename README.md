@@ -1,2 +1,17 @@
-# Afyanalytics-External-Integration-Service-Secure-Handshake-Gateway-
-A lightweight service that integrates with the Afyanalytics Health Platform using a secure two-step handshake. It initiates authentication, securely stores the temporary handshake token, and completes the process within the 15-minute validity period to obtain access credentials.
+# Afya Handshake Service
+
+## Setup
+1. Extract zip
+2. Rename `.env.example` to `.env`
+3. Run:
+   pip install -r requirements.txt
+   python run.py
+
+## Endpoints
+- /initiate
+- /complete
+- /auto
+
+## Docker
+docker build -t afya-service .
+docker run -p 5000:5000 afya-service
